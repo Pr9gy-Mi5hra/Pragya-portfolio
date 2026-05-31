@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent;
+  }
+
+  .glow-border {
+    box-shadow:
+      0 0 0 1px rgba(0, 229, 255, 0.1),
+      0 0 24px rgba(0, 229, 255, 0.08);
+  }
+
+  .glow-border-hover {
+    box-shadow:
+      0 0 0 1px rgba(0, 229, 255, 0.3),
+      0 0 32px rgba(124, 58, 237, 0.15);
+  }
+}
